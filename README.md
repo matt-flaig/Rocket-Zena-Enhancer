@@ -1,2 +1,2 @@
 # Rocket-Zena-Enhancer
-A Chrome extension to improve Rocket Zena Orchestrator
+A Chrome extension to improve ASG/Rocket Zena Orchestrator
