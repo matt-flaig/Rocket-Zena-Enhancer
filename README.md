@@ -9,6 +9,8 @@ A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rockets
 
 ![Zena Environment Selectors](screenshots/environmental-headers.png)
 
+Have a feature suggestion? [Open an issue](https://github.com/matt-flaig/Rocket-Zena-Enhancer/issues/new).
+
 ## Load Unpacked Extension in Chrome
 This extension is not currently published to any extension stores and must be loaded in manually.
 
