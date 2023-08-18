@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <title>Zena Platform Enhancer Options</title>         
+        <link href="library/css/bootstrap.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="library/css/blocks.css"> 
+    </head>     
+    <body> 
+        <div class="container"> 
+</div>         
+        <section class="align-items-center d-flex min-vh-100 pb-5 pt-5 text-secondary" style="background-color: #d1d1d1;"> 
+            <div class="container"> 
+                <div class="row"> 
+                    <div class="col-lg-11 col-md-9 col-xl-9 ms-auto me-auto"> 
+                        <div class="bg-dark overflow-hidden rounded-3"> 
+                            <div class="align-items-center g-0 row" style="background-color: #193441;"> 
+                                <div class="col-lg-4 p-4 pe-sm-5 ps-sm-5 text-center text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 317 317">
+                                    </svg>
+                                </div>                                 
+                                <div class="bg-white col-lg-8 pb-5 pe-4 pe-sm-5 ps-4 ps-sm-5 pt-5"> 
+                                    <div class="pb-lg-4 pt-lg-4">                   
+                                        <h1 class="h2 mb-1 text-dark">Extension Options</h1> 
+                                        <p class="mb-4">Adjust to suit your needs.</p> 
+                                        <form> 
+                                            <div class="mb-3"> 
+                                                <label class="h6">Theme:</label>                                                 
+                                                <select name="theme" class="option form-select" aria-label="Theme">
+                                                    <option value="off">Default</option>                                                     
+                                                    <option value="inverted">Inverted Colors</option>                                                
+                                                </select>
+                                                <small>Note: When using the Inverted Color theme some UI and text elements may not appear. The Zena page must be reloaded for changes to take effect.</small> 
+                                            </div>
+                                            <div class="mb-3"> 
+                                                <label class="h6">Auto-Expand Collapsed Elements:</label>                                                 
+                                                <select name="autoExpandCollapsedElements" class="option form-select" aria-label="Auto Expand Collapsed Elements">
+                                                    <option value="yes" selected>Yes</option>                                                
+                                                    <option value="no">No</option>                                                     
+                                                </select>
+                                                <small>Auto-expands collapsable elements such as the Item Properties in Process Reporting.</small> 
+                                            </div> 
+                                            <div class="mb-3"> 
+                                                <label class="h6">Disable "Save Before Exiting" Prompt:</label>                                                 
+                                                <select name="disableSaveBeforeExiting" class="option form-select" aria-label="Disable Save and Exit Prompt">
+                                                    <option value="yes">Yes</option>                                                
+                                                    <option value="no" selected>No</option>                                                     
+                                                </select>
+                                                <small>Zena will not prompt you about unsaved changes when navigating away. This may be desirable for faster environment switching.</small> 
+                                            </div>                                   
+                                            <!--<div class="input-group mb-3"> 
+                                                <section> 
+                                                    <label>Shortcut key for Full Screen (<a href="https://keycode.info/" target="_blank">must be a
+                                                                keycode</a>):
+                                                    </label>                                                     
+                                                    <input type="number" name="full_screen_shortcut" class="option form-control" value="192"> 
+                                                    <label> 
+                                                        <input type="checkbox" name="full_screen_shortcut_alt" value="ALT" class="option form-check-input">alt
+                                                    </label>                                                     
+                                                    <label> 
+                                                        <input type="checkbox" name="full_screen_shortcut_ctrl" value="CTRL" class="option form-check-input">ctrl
+                                                    </label>                                                     
+                                                    <label> 
+                                                        <input type="checkbox" name="full_screen_shortcut_shift" value="SHIFT" class="option form-check-input">shift
+                                                    </label>                                                     
+                                                    <br> 
+                                                    <small>Shortcut will not override system shortcuts, so be careful with what keys/modifiers you use.</small> 
+                                                </section>   
+                                                
+                                                <div class="input-group mb-3"> 
+                                                    
+                                                    <section> 
+                                                        <br>
+                                                        <label>Default Filters - Applied with clicking the filter button:</label> 
+                                             
+                                                    <select name="apply_process_filters" class="option form-select" aria-label=""> 
+                                                        <option value="on">On</option>                                                     
+                                                        <option value="off" selected>Off</option>                                                     
+                                                    </select>  
+                                                    
+                                                        <label> 
+                                                            <input type="checkbox" name="Filter_process" value="Process" class="option form-check-input">Process
+                                                        </label>                                                    <label> 
+                                                            <input type="checkbox" name="Filter_processProp" value="ProcessProperties" class="option form-check-input">Process Properties
+                                                        </label> 
+                                                        <label> 
+                                                            <input type="checkbox" name="Filter_crossref" value="CrossReferrenceTables" class="option form-check-input">Cross Referrence Tables
+                                                        </label> 
+                                                        <label> 
+                                                            <input type="checkbox" name="Filter_api_service" value="APIServices" class="option form-check-input">API Service
+                                                        </label> 
+
+                                                    </section> 
+                                            </div>-->                                            
+                                            <br> 
+                                            <button id="save" type="button" class="btn d-block w-100 btn-primary fw-bold">Save Options</button>                                             
+                                        </form>                                         
+                                        <div id="status" class="alert alert-success w-100 text-center" id="success-alert" style="display: none;"> 
+                                            Settings have been saved.
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <script src="library/inject/popper.min.js"></script>         
+        <script src="library/inject/bootstrap.min.js"></script>         
+        <script src="library/jquery/jquery-3.6.min.js"></script>         
+        <script src="library/js/options.js"></script>         
+    </body>     
+</html>

@@ -1,0 +1,32 @@
+{
+   "content_scripts": [ {
+      "js": [ "library/inject/arrive.min.js", "library/jquery/jquery-3.6.min.js" ],
+      "matches": [ "https://*.raleys.cloud/*" ],
+      "run_at": "document_start"
+   }, {
+      "css": [ "library/css/zena.css" ],
+      "js": [ "library/js/app.js" ],
+      "matches": [ "https://*.raleys.cloud/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "This extension enhances Zena in multiple ways to provide a more robust experience",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 3,
+   "name": "Zena Platform Enhancer",
+   "options_ui": {
+      "browser_style": true,
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0.0",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*.raleys.cloud/*" ],
+      "resources": [ "*.png", "*.jpg", "library/jquery/jquery-3.6.min.js", "library/inject/rasterizeHTML.min.js", "library/inject/showdown.min.js" ]
+   } ]
+}

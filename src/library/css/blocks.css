@@ -1,0 +1,12 @@
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    border-color: #59c4c6 !important;
+    border-radius: 3px !important;
+    padding: 7px 7px 7px 7px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    background-image: none !important;
+    background-color: #59c4c6 !important;
+}
+.text-dark {
+    color: #474747 !important;
+}
