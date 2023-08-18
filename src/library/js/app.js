@@ -67,7 +67,7 @@ document.arrive("#app-header", function(element) {
       // }, 1200)
       
       //element.querySelector('#box-1049').innerHTML = '<select name="environment" id="environment"><option value="test"' + (zenaEnvironment == "test" ? "selected" : "") + '>Zena-TEST</option><option value="qa">Zena-QA</option><option value="prod">Zena-PROD</option></select>';
-    }, 500);
+    }, 750);
   }
 });
 
