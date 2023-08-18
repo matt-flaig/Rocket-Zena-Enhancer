@@ -1,5 +1,12 @@
 # Rocket-Zena-Enhancer
 A Chrome extension to improve ASG/Rocket Zena Orchestrator
+## Features
+- Psudeo Dark Mode (inverts the colors of the webpage)
+- Environment Switcher (quickly switch between Test, QA and Prod)
+- Colorized Headers to Match environments (Green in Test, Purple in QA, Red in Prod)
+- Auto-Expand collapsable components (utilized in Process Reporting)
+- Disable "Save Before Exiting" Prompt
+
 ## Load Unpacked Extension in Chrome
 This extension is not currently published to any extension stores and must be loaded in manually.
 
