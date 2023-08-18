@@ -14,12 +14,7 @@ var zenaEnvironment = (function (subdomain) {
 
 window.onload = function(e){ 
   console.log("Zena Platform Enhancer Loaded");
-  // don't warn before leaving pages
-  window.onbeforeunload = function(){
-    // blank function do nothing
-  }
-  //setTimeout(function(){document.getElementById('button-1027-btnInnerEl').click();}, 1750);
-
+  
   // recall base preferences
   chrome.storage.sync.get(["theme", "disableSaveBeforeExiting"], function(e) {
     // set the theme based on preference
@@ -75,7 +70,7 @@ document.arrive('#statusbar-innerCt', function(el){
 
 });
 
-chrome.storage.sync.get(["auto-expand-collapsed-elements"], function(e) {
+chrome.storage.sync.get(["autoExpandCollapsedElements"], function(e) {
   if(e.autoExpandCollapsedElements == "yes"){
     document.arrive('.x-tool-expand-bottom', function(el){
       // document.querySelectorAll('.x-tool-expand-bottom').forEach((e) => {
