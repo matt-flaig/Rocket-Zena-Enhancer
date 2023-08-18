@@ -9,7 +9,7 @@
       "matches": [ "https://*.raleys.cloud/*" ],
       "run_at": "document_end"
    } ],
-   "description": "This extension enhances Zena in multiple ways to provide a more robust experience",
+   "description": "This extension provides enhancements to Rocket Zena Orchestrator that provide a more robust experience",
    "icons": {
       "128": "icon128.png",
       "16": "icon16.png",
