@@ -1,5 +1,5 @@
 # Rocket-Zena-Enhancer
-A Chrome extension to improve ASG/Rocket Zena Orchestrator
+A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rocketsoftware.com/products/rocket-workload-automation-and-orchestration/rocket-zena).
 ## Features
 - Psudeo Dark Mode (inverts the colors of the webpage)
 - Environment Switcher (quickly switch between Test, QA and Prod)
