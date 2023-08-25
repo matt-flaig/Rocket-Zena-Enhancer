@@ -11,11 +11,18 @@ A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rockets
 
 Have a feature suggestion? [Open an issue](https://github.com/matt-flaig/Rocket-Zena-Enhancer/issues/new).
 
-## Load Unpacked Extension in Chrome
+## Installing This Extension
 This extension is not currently published to any extension stores and must be loaded in manually.
 
 In Chrome, visit the url **chrome://extensions**
 
 Enable **Developer Mode** by toggling the switch on the top right corner of the page.
 
-Click on **Load unpacked** button, select the `src` folder from this repo (which contains this extension), and click on "Select Folder."
+Click on **Load unpacked** button, select the `src` folder from this repo (which contains this extension), and click on "Select Folder".
+
+## Using This Extension in Your Own Rocket Zena Instance
+This plugin was developed around a specific Rocket Zena environment, if you're interested in using this extension in your own environment there are a few changes you'll need to make.
+
+- Reconfigure the `matches` array in the `src/manifest.json` file to match your own installation URL.
+- Adjust the environment logic (found in src/library/js/app.js) to correctly detect each of your own environments.
+
