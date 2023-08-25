@@ -3,6 +3,7 @@ A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rockets
 ## Features
 - Psudeo Dark Mode (inverts the colors of the webpage)
 - Environment Switcher (quickly switch between Test, QA and Prod)
+  * (Hold the Control or Command key while switching to open in a new tab)
 - Colorized Headers to Match environments (Green in Test, Purple in QA, Red in Prod)
 - Auto-Expand collapsable components (utilized in Process Reporting)
 - Disable "Save Before Exiting" Prompt
@@ -20,9 +21,8 @@ Enable **Developer Mode** by toggling the switch on the top right corner of the 
 
 Click on **Load unpacked** button, select the `src` folder from this repo (which contains this extension), and click on "Select Folder".
 
-## Using This Extension in Your Own Rocket Zena Instance
+## Using This Extension in Your Own Zena Instance
 This plugin was developed around a specific Rocket Zena environment, if you're interested in using this extension in your own environment there are a few changes you'll need to make.
 
-- Reconfigure the `matches` array in the `src/manifest.json` file to match your own installation URL.
+- Reconfigure the `matches` array values in the `src/manifest.json` file to match your own installation URL.
 - Adjust the environment logic (found in src/library/js/app.js) to correctly detect each of your own environments.
-
