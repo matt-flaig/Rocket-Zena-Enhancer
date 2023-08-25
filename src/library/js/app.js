@@ -52,6 +52,10 @@ document.arrive("#app-header", function(element) {
     }
     
     // change Zena Title to selector
+    // move this to a setInterval until it's inserted
+    // as sometimes it fires too early while things
+    // are still loading and doesn't load into
+    // the header.
     setTimeout(function(){
       var subHeaderField = element.querySelector('#box-1049');
       subHeaderField.style.top = "-2px";
