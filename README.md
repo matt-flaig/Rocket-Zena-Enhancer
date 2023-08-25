@@ -1,4 +1,4 @@
-# Rocket-Zena-Enhancer
+# Rocket Zena Platform Enhancer
 A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rocketsoftware.com/products/rocket-workload-automation-and-orchestration/rocket-zena).
 ## Features
 - Psudeo Dark Mode (inverts the colors of the webpage)
