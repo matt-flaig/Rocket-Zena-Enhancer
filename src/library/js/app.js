@@ -55,7 +55,7 @@ document.arrive("#app-header", function(element) {
     setTimeout(function(){
       var subHeaderField = element.querySelector('#box-1049');
       subHeaderField.style.top = "-2px";
-      subHeaderField.innerHTML = '<select name="environment" id="environmentSelector" class="x-font-select x-form-field x-form-text-default" onChange="window.onbeforeunload = function(){};window.location.href = \'https://\' + window.location.href.replace(/^[^.]*/, \'zena-\' + document.getElementById(\'environmentSelector\').value)"><option value="prod" ' + (zenaEnvironment == "prod" ? "selected" : "") + '>Zena Prod</option><option value="qa" ' + (zenaEnvironment == "qa" ? "selected" : "") + '>Zena QA</option><option value="test" ' + (zenaEnvironment == "test" ? "selected" : "") + '>Zena Test</option></select>';
+      subHeaderField.innerHTML = '<select name="environment" id="environmentSelector" class="x-font-select x-form-field x-form-text-default" onFocus="this.setAttribute(\'PrvSelectedValue\',this.value);" onChange="changeToSelectedEnvironment(event, this)"><option value="prod" ' + (zenaEnvironment == "prod" ? "selected" : "") + '>Zena Prod</option><option value="qa" ' + (zenaEnvironment == "qa" ? "selected" : "") + '>Zena QA</option><option value="test" ' + (zenaEnvironment == "test" ? "selected" : "") + '>Zena Test</option></select>';
       // Fire the window resize event which fixes the header vertical centering
       // setTimeout(function(){
       //   window.dispatchEvent(new Event('resize'));
@@ -122,3 +122,12 @@ function invertWebpageColors(){
 /*
 javascript:(d=>{var css=`:root{background-color:#fefefe;filter:invert(100%)}*{background-color:inherit}img:not([src*=".svg"]),video{filter: invert(100%)}`,style,id="dark-theme-snippet",ee=d.getElementById(id);if(null!=ee)ee.parentNode.removeChild(ee);else {style = d.createElement('style');style.type="text/css";style.id=id;if(style.styleSheet)style.styleSheet.cssText=css;else style.appendChild(d.createTextNode(css));(d.head||d.querySelector('head')).appendChild(style)}})(document)
 */
+
+const loadScript = (url) => {
+  let body = document.getElementsByTagName('body')[0];
+  let script = document.createElement('script');
+  script.setAttribute('type', 'text/javascript');
+  script.setAttribute('src', chrome.runtime.getURL(url));
+  body.appendChild(script);
+}
+loadScript('library/js/inline.js');
