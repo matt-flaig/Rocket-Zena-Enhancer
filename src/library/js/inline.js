@@ -1,4 +1,4 @@
-// track cntrl key and meta keys press events
+// track ctrl key and meta keys press events
 window.keyPressStateManager = {
     ctrlKeyPressed: false,
     metaKeyPressed: false
