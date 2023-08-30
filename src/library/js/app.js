@@ -16,7 +16,7 @@ window.onload = function(e){
   console.log("Zena Platform Enhancer Loaded");
   
   // recall base preferences
-  chrome.storage.sync.get(["theme", "disableSaveBeforeExiting"], function(e) {
+  chrome.storage.sync.get(["theme", "disableSaveBeforeExiting", "multilineDetailsInput"], function(e) {
     // set the theme based on preference
     if(e.theme == "inverted"){
       console.log('Applying inverted theme')
@@ -34,6 +34,9 @@ window.onload = function(e){
       window.onbeforeunload = function() {
         return null;  // return null to avoid pop up
       }
+    }
+    if(e.multilineDetailsInput == "yes"){
+      loadScript('library/js/extensions.js');
     }
   });  
 
