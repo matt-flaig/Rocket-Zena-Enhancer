@@ -27,6 +27,6 @@
    "version": "1.0.0.0",
    "web_accessible_resources": [ {
       "matches": [ "https://*.raleys.cloud/*" ],
-      "resources": [ "*.png", "*.jpg", "library/jquery/jquery-3.6.min.js", "library/inject/rasterizeHTML.min.js", "library/inject/showdown.min.js", "library/js/inline.js" ]
+      "resources": [ "*.png", "*.jpg", "library/jquery/jquery-3.6.min.js", "library/inject/rasterizeHTML.min.js", "library/inject/showdown.min.js", "library/js/inline.js", "library/js/extensions.js" ]
    } ]
 }
