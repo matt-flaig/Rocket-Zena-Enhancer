@@ -7,6 +7,7 @@ A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rockets
 - Colorized Headers to Match environments (Green in Test, Purple in QA, Red in Prod)
 - Auto-Expand collapsable components (utilized in Process Reporting)
 - Disable "Save Before Exiting" Prompt
+- Enable multi-line editing of variables in the Operations view
 
 ![Zena Environment Selectors](screenshots/environmental-headers.png)
 
