@@ -35,7 +35,9 @@ window.onload = function(e){
         return null;  // return null to avoid pop up
       }
     }
-    if(e.multilineDetailsInput == "yes"){
+    // multiline editing is enabled by default in options.html
+    // so we default to turning it on if there's anything but "no"
+    if(e.multilineDetailsInput != "no"){ 
       loadScript('library/js/extensions.js');
     }
   });  
