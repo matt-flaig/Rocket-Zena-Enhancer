@@ -8,6 +8,7 @@ A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rockets
 - Auto-Expand collapsable components (utilized in Process Reporting)
 - Disable "Save Before Exiting" Prompt
 - Enable multi-line editing of variables in the Operations view
+  * (Limited to Zena version 4.3.1.61)
 
 ![Zena Environment Selectors](screenshots/environmental-headers.png)
 
