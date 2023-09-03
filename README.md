@@ -15,7 +15,9 @@ A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rockets
 Have a feature suggestion? [Open an issue](https://github.com/matt-flaig/Rocket-Zena-Enhancer/issues/new).
 
 ## Installing This Extension
-This extension is not currently published to any extension stores and must be loaded in manually.
+This extension is published to the [Chrome Web Store](https://chrome.google.com/webstore/detail/zena-platform-enhancer/phimdobecbpjafnibopanckafpipakab) and can be downloaded on the Google Chrome and Microsoft Edge browsers.
+
+### Manual Installation (Load Unpacked)
 
 In Chrome, visit the url **chrome://extensions**
 
