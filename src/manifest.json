@@ -24,7 +24,7 @@
    },
    "permissions": [ "storage" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.0.0.0",
+   "version": "1.0.0.1",
    "web_accessible_resources": [ {
       "matches": [ "https://*.raleys.cloud/*" ],
       "resources": [ "*.png", "*.jpg", "library/jquery/jquery-3.6.min.js", "library/inject/rasterizeHTML.min.js", "library/inject/showdown.min.js", "library/js/inline.js", "library/js/extensions.js" ]
