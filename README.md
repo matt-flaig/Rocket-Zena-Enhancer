@@ -6,7 +6,7 @@
    A Chrome extension to improve <a href="https://www.rocketsoftware.com/products/rocket-workload-automation-and-orchestration/rocket-zena">ASG/Rocket Zena Orchestrator</a>.
    <br />
    <br />
-   <a href="https://chrome.google.com/webstore/detail/zena-platform-enhancer/phimdobecbpjafnibopanckafpipakab"><img width="248" src="screenshots/chrome-web-store-badge-border.png"></a>
+   <a href="https://chrome.google.com/webstore/detail/zena-platform-enhancer/phimdobecbpjafnibopanckafpipakab" target="_blank"><img width="248" src="screenshots/chrome-web-store-badge-border.png"></a>
   </p>
 </p>
 
