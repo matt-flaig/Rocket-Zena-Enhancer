@@ -1,5 +1,15 @@
-# Rocket Zena Platform Enhancer
-A Chrome extension to improve [ASG/Rocket Zena Orchestrator](https://www.rocketsoftware.com/products/rocket-workload-automation-and-orchestration/rocket-zena).
+<p align="center">
+
+  <h2 align="center">Rocket Zena Platform Enhancer</h3>
+
+  <p align="center">
+   A Chrome extension to improve <a href="https://www.rocketsoftware.com/products/rocket-workload-automation-and-orchestration/rocket-zena">ASG/Rocket Zena Orchestrator</a>.
+   <br />
+   <br />
+   <a href="https://chrome.google.com/webstore/detail/zena-platform-enhancer/phimdobecbpjafnibopanckafpipakab"><img width="248" src="screenshots/chrome-web-store-badge-border.png"></a>
+  </p>
+</p>
+
 ## Features
 - Psudeo Dark Mode (inverts the colors of the webpage)
 - Environment Switcher (quickly switch between Test, QA and Prod)
