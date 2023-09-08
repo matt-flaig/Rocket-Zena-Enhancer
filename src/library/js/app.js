@@ -37,7 +37,8 @@ window.onload = function(e){
     }
     // multiline editing is enabled by default in options.html
     // so we default to turning it on if there's anything but "no"
-    if(e.multilineDetailsInput != "no"){ 
+    if(e.multilineDetailsInput != "no"){
+      // load the extension override script
       loadScript('library/js/extensions.js');
     }
   });  
@@ -73,10 +74,6 @@ document.arrive("#app-header", function(element) {
       //element.querySelector('#box-1049').innerHTML = '<select name="environment" id="environment"><option value="test"' + (zenaEnvironment == "test" ? "selected" : "") + '>Zena-TEST</option><option value="qa">Zena-QA</option><option value="prod">Zena-PROD</option></select>';
     }, 750);
   }
-});
-
-document.arrive('#statusbar-innerCt', function(el){
-
 });
 
 chrome.storage.sync.get(["autoExpandCollapsedElements"], function(e) {
@@ -126,12 +123,7 @@ function invertWebpageColors(){
   })(document)
 }
 
-// invert all colors on webpage
-// source: https://gist.github.com/frontdevops/8aea1e0252dd826488dad63319e3ec88
-/*
-javascript:(d=>{var css=`:root{background-color:#fefefe;filter:invert(100%)}*{background-color:inherit}img:not([src*=".svg"]),video{filter: invert(100%)}`,style,id="dark-theme-snippet",ee=d.getElementById(id);if(null!=ee)ee.parentNode.removeChild(ee);else {style = d.createElement('style');style.type="text/css";style.id=id;if(style.styleSheet)style.styleSheet.cssText=css;else style.appendChild(d.createTextNode(css));(d.head||d.querySelector('head')).appendChild(style)}})(document)
-*/
-
+// function used to load scripts by injecting a script tag at in the <body> element
 const loadScript = (url) => {
   let body = document.getElementsByTagName('body')[0];
   let script = document.createElement('script');
