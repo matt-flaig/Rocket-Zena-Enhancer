@@ -63,7 +63,7 @@ document.arrive("#app-header", function(element) {
     // are still loading and doesn't load into
     // the header.
     setTimeout(function(){
-      var subHeaderField = element.querySelector('#box-1049');
+      var subHeaderField = element.querySelector('.app-header2-text');
       subHeaderField.style.top = "-2px";
       subHeaderField.innerHTML = '<select name="environment" id="environmentSelector" class="x-font-select x-form-field x-form-text-default" onFocus="this.setAttribute(\'PrvSelectedValue\',this.value);" onChange="changeToSelectedEnvironment(event, this)"><option value="prod" ' + (zenaEnvironment == "prod" ? "selected" : "") + '>Zena Prod</option><option value="qa" ' + (zenaEnvironment == "qa" ? "selected" : "") + '>Zena QA</option><option value="test" ' + (zenaEnvironment == "test" ? "selected" : "") + '>Zena Test</option></select>';
       // Fire the window resize event which fixes the header vertical centering
