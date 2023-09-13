@@ -14,29 +14,16 @@ function changeToSelectedEnvironment(event, self){
         window.location.href = url;
     }
 }
-var releaseKeysOnWindowBlur = function (event) {
+var releaseKeysOnWindowBlur = function(event) {
     window.keyPressStateManager.ctrlKeyPressed = false;
     window.keyPressStateManager.metaKeyPressed = false;
 }
-var onKeyEvent = function (event) {	
-	if (event.type == "keyup") {
-        if(event.metaKey){
-            window.keyPressStateManager.metaKeyPressed = false;
-        }
-        if(event.ctrlKey){
-            window.keyPressStateManager.ctrlKeyPressed = false;
-        }
-	}
-    if (event.type == "keydown"){
-        if(event.metaKey){
-            window.keyPressStateManager.metaKeyPressed = true;
-        }
-        if(event.ctrlKey){
-            window.keyPressStateManager.ctrlKeyPressed = true;
-        }
-    }
+var onKeyEvent = function(event) {	
+    window.keyPressStateManager.metaKeyPressed = event.metaKey;
+    window.keyPressStateManager.ctrlKeyPressed = event.ctrlKey;
 }
 
 document.addEventListener("keydown", onKeyEvent, false);
 document.addEventListener("keyup", onKeyEvent, false);
 document.addEventListener("blur", releaseKeysOnWindowBlur, false);
+document.addEventListener("visibilitychange", releaseKeysOnWindowBlur, false);
