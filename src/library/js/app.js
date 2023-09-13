@@ -57,13 +57,25 @@ document.arrive("#app-header", function(element) {
       element.style.backgroundColor = "#f14d3c";
     }
     
-    // change Zena Title to selector
-    // move this to a setInterval until it's inserted
-    // as sometimes it fires too early while things
-    // are still loading and doesn't load into
-    // the header.
-    setTimeout(function(){
-      var subHeaderField = element.querySelector('.app-header2-text');
+    // change Zena Title to env selector
+    var intervalLoops = 0;
+    var injectEnvSelector = setInterval(function(){
+      var subHeaderField = element.querySelector(".app-header2-text");
+      // check if we have some short title such as "AEO Scheduler"
+      if(subHeaderField && subHeaderField.innerHTML.length < 20){
+        subHeaderField.style.top = "-2px";
+        subHeaderField.innerHTML = '<select name="environment" id="environmentSelector" class="x-font-select x-form-field x-form-text-default" onFocus="this.setAttribute(\'PrvSelectedValue\',this.value);" onChange="changeToSelectedEnvironment(event, this)"><option value="prod" ' + (zenaEnvironment == "prod" ? "selected" : "") + '>Zena Prod</option><option value="qa" ' + (zenaEnvironment == "qa" ? "selected" : "") + '>Zena QA</option><option value="test" ' + (zenaEnvironment == "test" ? "selected" : "") + '>Zena Test</option></select>';
+      }else{
+        // only clear the interval once we're sure Zena has loaded fully
+        if(intervalLoops > 10){
+          clearInterval(injectEnvSelector);
+          console.log('injectEnvSelector interval cleared')
+        }
+        intervalLoops++;
+      }
+    }, 500);
+    /*setTimeout(function(){
+      var subHeaderField = element.querySelector(".app-header2-text");
       subHeaderField.style.top = "-2px";
       subHeaderField.innerHTML = '<select name="environment" id="environmentSelector" class="x-font-select x-form-field x-form-text-default" onFocus="this.setAttribute(\'PrvSelectedValue\',this.value);" onChange="changeToSelectedEnvironment(event, this)"><option value="prod" ' + (zenaEnvironment == "prod" ? "selected" : "") + '>Zena Prod</option><option value="qa" ' + (zenaEnvironment == "qa" ? "selected" : "") + '>Zena QA</option><option value="test" ' + (zenaEnvironment == "test" ? "selected" : "") + '>Zena Test</option></select>';
       // Fire the window resize event which fixes the header vertical centering
@@ -72,7 +84,7 @@ document.arrive("#app-header", function(element) {
       // }, 1200)
       
       //element.querySelector('#box-1049').innerHTML = '<select name="environment" id="environment"><option value="test"' + (zenaEnvironment == "test" ? "selected" : "") + '>Zena-TEST</option><option value="qa">Zena-QA</option><option value="prod">Zena-PROD</option></select>';
-    }, 750);
+    }, 750);*/
   }
 });
 
