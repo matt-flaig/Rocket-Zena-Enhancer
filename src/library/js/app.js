@@ -16,7 +16,7 @@ window.onload = function(e){
   console.log("Zena Platform Enhancer Loaded");
   
   // recall base preferences
-  chrome.storage.sync.get(["theme", "disableSaveBeforeExiting", "multilineDetailsInput"], function(e) {
+  chrome.storage.sync.get(["theme", "disableSaveBeforeExiting", "multilineDetailsInput", "autoExpandFoldersByName"], function(e) {
     // set the theme based on preference
     if(e.theme == "inverted"){
       console.log('Applying inverted theme')
@@ -39,6 +39,23 @@ window.onload = function(e){
     // so we default to turning it on if there's anything but "no"
     if(e.multilineDetailsInput != "no"){ 
       loadScript('library/js/extensions.js');
+    }
+    if(e.autoExpandFoldersByName){
+      var autoOpenFolderNames = e.autoExpandFoldersByName.toLowerCase().split(",");
+      document.arrive('.x-tree-expander', function(el){
+        //document.querySelectorAll(".x-tree-elbow-img,.x-tree-elbow-plus,.x-tree-expander").forEach((el) =>{
+          // check if we have "Definitions" folder
+          var folderTitle = el.parentElement.querySelector(".x-tree-node-text").innerHTML.toLowerCase();
+          if(autoOpenFolderNames.includes(folderTitle)){
+            // check if folder is already open, if not click the open icon
+            if(el.parentElement.parentElement.parentElement.ariaExpanded == "false"){
+              setTimeout(function(el){
+                el.click();
+              }, 100, el);
+            }
+          }
+      //})
+      });
     }
   });  
 
