@@ -43,13 +43,15 @@ window.onload = function(e){
     }
     if(e.autoExpandFoldersByName){
       var autoOpenFolderNames = e.autoExpandFoldersByName.toLowerCase().split(",");
+      var uncollapsedThisSession = []; // we keep track of the folders we have uncollapsed so we only open each one once.
       document.arrive('.x-tree-expander', function(el){
         //document.querySelectorAll(".x-tree-elbow-img,.x-tree-elbow-plus,.x-tree-expander").forEach((el) =>{
           // check if we have "Definitions" folder
           var folderTitle = el.parentElement.querySelector(".x-tree-node-text").innerHTML.toLowerCase();
-          if(autoOpenFolderNames.includes(folderTitle)){
+          if(autoOpenFolderNames.includes(folderTitle) && !uncollapsedThisSession.includes(folderTitle)){
             // check if folder is already open, if not click the open icon
             if(el.parentElement.parentElement.parentElement.ariaExpanded == "false"){
+              uncollapsedThisSession.push(folderTitle);
               setTimeout(function(el){
                 el.click();
               }, 100, el);
