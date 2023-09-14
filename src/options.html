@@ -39,21 +39,21 @@
                                                 </select>
                                                 <small>Adds multi-line text support to "Details" variable entry in the operations view.  (Only applies to Zena version 4.3.1.61)</small> 
                                             </div>
-                                            <div class="mb-3"> 
+                                            <div class="input-group mb-3"> 
                                                 <section> 
-                                                    <label class="h6">Auto-Expand Folders By Name</label>                                                     
+                                                    <label class="h6">Auto-Expand Folders</label>                                                     
                                                     <input type="text" name="autoExpandFoldersByName" class="option form-control" value=""> 
                                                     <small>Enter a list of folder names (separated with commas) to auto-expand when they appear. Example: Definitions,Processes,System Views</small> 
-                                                </section>                                                 
+                                                </section>  
+                                                <section>
+                                                    <label class="h6">Auto-Expand Collapsed Elements:</label>                                                 
+                                                    <select name="autoExpandCollapsedElements" class="option form-select" aria-label="Auto Expand Collapsed Elements">
+                                                        <option value="yes">Yes</option>                                                
+                                                        <option value="no" selected>No</option>                                                     
+                                                    </select>
+                                                    <small>Auto-expands collapsable elements such as the Item Properties in Process Reporting.</small>
+                                                </section>
                                             </div>
-                                            <div class="mb-3"> 
-                                                <label class="h6">Auto-Expand Collapsed Elements:</label>                                                 
-                                                <select name="autoExpandCollapsedElements" class="option form-select" aria-label="Auto Expand Collapsed Elements">
-                                                    <option value="yes">Yes</option>                                                
-                                                    <option value="no" selected>No</option>                                                     
-                                                </select>
-                                                <small>Auto-expands collapsable elements such as the Item Properties in Process Reporting.</small> 
-                                            </div> 
                                             <div class="mb-3"> 
                                                 <label class="h6">Disable "Save Before Exiting" Prompt:</label>                                                 
                                                 <select name="disableSaveBeforeExiting" class="option form-select" aria-label="Disable Save and Exit Prompt">
