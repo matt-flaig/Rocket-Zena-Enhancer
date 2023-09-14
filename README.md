@@ -19,6 +19,7 @@
 - Disable "Save Before Exiting" Prompt
 - Enable multi-line editing of variables in the Operations view
   * (Limited to Zena version 4.3.1.61)
+- Automatically Open Folders on webpage load
 
 ![Zena Environment Selectors](screenshots/environmental-headers.png)
 
