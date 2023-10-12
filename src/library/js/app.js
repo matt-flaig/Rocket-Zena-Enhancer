@@ -83,7 +83,7 @@ document.arrive("#app-header", function(element) {
     var intervalLoops = 0;
     var injectEnvSelector = setInterval(function(){
 
-      if(windowTitleEnvironmentName){ // defined in window.onload above
+      if(typeof windowTitleEnvironmentName !== "undefined" && windowTitleEnvironmentName){ // defined in window.onload above
         document.title = "Zena " + (zenaEnvironment.length < 3 ? zenaEnvironment.toUpperCase() : zenaEnvironment.charAt(0).toUpperCase() + zenaEnvironment.slice(1));
       }
 
