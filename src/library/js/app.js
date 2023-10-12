@@ -16,7 +16,10 @@ window.onload = function(e){
   console.log("Zena Platform Enhancer Loaded");
   
   // recall base preferences
-  chrome.storage.sync.get(["theme", "disableSaveBeforeExiting", "multilineDetailsInput", "autoExpandFoldersByName"], function(e) {
+  chrome.storage.sync.get(["theme", "disableSaveBeforeExiting", "multilineDetailsInput", "autoExpandFoldersByName", "windowTitleEnvironmentName"], function(e) {
+    if(e.windowTitleEnvironmentName){
+      windowTitleEnvironmentName = true;
+    }
     // set the theme based on preference
     if(e.theme == "inverted"){
       console.log('Applying inverted theme')
@@ -79,7 +82,13 @@ document.arrive("#app-header", function(element) {
     // change Zena Title to env selector
     var intervalLoops = 0;
     var injectEnvSelector = setInterval(function(){
+
+      if(windowTitleEnvironmentName){ // defined in window.onload above
+        document.title = "Zena " + (zenaEnvironment.length < 3 ? zenaEnvironment.toUpperCase() : zenaEnvironment.charAt(0).toUpperCase() + zenaEnvironment.slice(1));
+      }
+
       var subHeaderField = element.querySelector(".app-header2-text");
+
       // check if we have some short title such as "AEO Scheduler"
       if(subHeaderField && subHeaderField.innerHTML.length < 20){
         subHeaderField.style.top = "-2px";
