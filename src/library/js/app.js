@@ -9,6 +9,8 @@ var zenaEnvironment = (function (subdomain) {
       return "qa";
     case "zena-prod":
       return "prod";
+    default:
+      return "prod";
   }
 })(subdomain);
 
