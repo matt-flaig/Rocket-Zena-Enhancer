@@ -41,4 +41,4 @@ Click on **Load unpacked** button, select the `src` folder from this repo (which
 This plugin was developed around a specific Rocket Zena environment, if you're interested in using this extension in your own environment there are a few changes you'll need to make.
 
 - Reconfigure the `matches` array values in the `src/manifest.json` file to match your own installation URL.
-- Adjust the environment logic (found in src/library/js/app.js) to correctly detect each of your own environments.
+- Adjust the environment logic (found in [src/library/js/app.js](src/library/js/app.js)) to correctly detect each of your own environments.
