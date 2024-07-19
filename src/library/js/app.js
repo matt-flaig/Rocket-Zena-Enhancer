@@ -72,13 +72,13 @@ window.onload = function(e){
 document.arrive("#app-header", function(element) {
   if(zenaEnvironment){ // not all instances will have a Zena environment setup
     if(zenaEnvironment == "test"){
-      element.style.backgroundColor = "#96ca4f";
+      element.style.backgroundColor = "#46a971";
     }
     if(zenaEnvironment == "qa"){
-      element.style.backgroundColor = "#7f63a1";
+      element.style.backgroundColor = "#7a007a";
     }
     if(zenaEnvironment == "prod"){
-      element.style.backgroundColor = "#f14d3c";
+      element.style.backgroundColor = "#d90000";
     }
     
     // change Zena Title to env selector
