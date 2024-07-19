@@ -17,9 +17,7 @@
 - Colorized Headers to Match environments (Green in Test, Purple in QA, Red in Prod)
 - Auto-Expand collapsable components (utilized in Process Reporting)
 - Disable "Save Before Exiting" Prompt
-- Enable multi-line editing of variables in the Operations view
-  * (Limited to Zena version 4.3.1.61)
-- Adds option to change tab title to Zena Environment
+- Adds option to change tab title to Zena Environment (Test, QA and Prod)
 - Folders can be auto-expanded by name
 
 ![Zena Environment Selectors](screenshots/environmental-headers.png)
